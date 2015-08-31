@@ -1,0 +1,6 @@
+mixin footer-menu(title, items)
+  div(class="footer__menu-title")= title
+  ul(class="footer__menu-list")
+    each item, idx in items
+      li(class="footer__menu-item")
+        a(href="#", class="footer__menu-link")= item

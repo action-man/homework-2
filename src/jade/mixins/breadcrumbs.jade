@@ -1,0 +1,13 @@
+mixin breadcrumbs(items)
+  ul(class="breadcrumbs")
+
+    each item, idx in items
+
+      if items.length - 1 != idx
+        li(class="breadcrumbs__item")
+          a(href="#", class="breadcrumbs__link")= item
+        li(class="breadcrumbs__sep") &gt;
+
+      else
+        li(class="breadcrumbs__item")
+          span(class="breadcrumbs__link")= item

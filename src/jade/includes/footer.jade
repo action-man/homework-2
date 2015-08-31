@@ -1,0 +1,33 @@
+//footer
+footer(class="footer")
+  div(class="footer__inner")
+
+
+    // logo
+    img(src="images/footer-logo.png", alt="Apple Shop", width="139", height="39", class="footer__logo")
+
+
+    // menu
+    div(class="footer__menu")
+      div(class="footer__menu-col")
+        +footer-menu('О магазине', ['О нас', 'Наши цены', 'Наши скидки', 'Акции'])
+      div(class="footer__menu-col")
+        +footer-menu('Каталог', ['Смартфоны', 'Планшеты', 'Компьютеры', 'Аксессуары'])
+      div(class="footer__menu-col")
+        +footer-menu('Контакты', ['Телефоны', 'Адреса', 'Карта проезда', 'Обратная связь'])
+
+
+    // misc
+    div(class="footer__misc")
+      ul(class="footer__apps")
+        li(class="footer__apps-item")
+          a(href="#", class="footer__apps-link")
+            img(src="images/app-store.png", alt="App Store", width="90", height="32")
+        li(class="footer__apps-item")
+          a(href="#", class="footer__apps-link")
+            img(src="images/google-play.png", alt="Google Play", width="90", height="32")
+
+
+      // socials
+      div(class="footer__socials")
+        img(src="images/socials.png", alt="")

@@ -1,0 +1,223 @@
+extends ./extends/layout
+
+
+block title
+  title Каталог
+
+
+block pre-content
+
+
+  div(class="pre-content__left")
+
+
+    // breadcrumbs
+    +breadcrumbs(['Главная', 'Каталог'])
+  div(class="pre-content__right")
+    div(class="page-tools")
+
+
+      // select
+      select(class="js-view-select", data-custom-class="page-tools__view-select", autocomplete="off")
+        option(value="grid" selected="true") Сеткой
+        option(value="list") Списком    
+
+
+      // pagination
+      +pagination(class="page-tools__pag")
+
+
+block sidebar
+
+
+  // catalog menu
+  div(class="catalog-menu js-catalog-menu")
+    ul(class="catalog-menu__list")
+      li(class="catalog-menu__item")
+        a(href="#", class="catalog-menu__link js-catalog-menu__trigger") iPhone
+        ul(class="catalog-menu__list js-catalog-menu__level")
+          li(class="catalog-menu__item")
+            a(href="#", class="catalog-menu__link") iPhone 4s
+          li(class="catalog-menu__item")
+            a(href="#", class="catalog-menu__link") iPhone 5
+          li(class="catalog-menu__item")
+            a(href="#", class="catalog-menu__link") iPhone 5s с эксклюзивным дизайном
+          li(class="catalog-menu__item")
+            a(href="#", class="catalog-menu__link") iPhone 6
+          li(class="catalog-menu__item")
+            a(href="#", class="catalog-menu__link") iPhone 6 plus
+      li(class="catalog-menu__item")
+        a(href="#", class="catalog-menu__link js-catalog-menu__trigger") iPad
+        ul(class="catalog-menu__list js-catalog-menu__level")
+          li(class="catalog-menu__item")
+            a(href="#", class="catalog-menu__link") Mini
+          li(class="catalog-menu__item")
+            a(href="#", class="catalog-menu__link") Mini 2
+          li(class="catalog-menu__item")
+            a(href="#", class="catalog-menu__link") Air 
+          li(class="catalog-menu__item")
+            a(href="#", class="catalog-menu__link") Air 2
+      li(class="catalog-menu__item")
+        a(href="#", class="catalog-menu__link js-catalog-menu__trigger") iMac
+        ul(class="catalog-menu__list js-catalog-menu__level")
+          li(class="catalog-menu__item")
+            a(href="#", class="catalog-menu__link") 21"
+          li(class="catalog-menu__item")
+            a(href="#", class="catalog-menu__link") 27"
+      li(class="catalog-menu__item")
+        a(href="#", class="catalog-menu__link js-catalog-menu__trigger") Macbook
+        ul(class="catalog-menu__list js-catalog-menu__level")
+          li(class="catalog-menu__item")
+            a(href="#", class="catalog-menu__link") Air 
+          li(class="catalog-menu__item")
+            a(href="#", class="catalog-menu__link") Pro        
+      li(class="catalog-menu__item")
+        a(href="#", class="catalog-menu__link") iPod
+      li(class="catalog-menu__item")
+        a(href="#", class="catalog-menu__link") Другое
+
+
+
+block content
+
+
+  // products list
+  div(class="products products_view-grid js-products")
+    ul(class="products__list")
+
+
+      // item
+      li(class="products__item")
+        div(class="products__item-side")
+          div(class="products__item-image-box")
+            a(href="#", class="products__item-image image-box")
+              img(src="images/products/1.jpg", alt="Apple Thunderbolt Display 27")
+        div(class="products__item-body")
+          div(class="products__item-title")
+            a(href="#", class="products__item-title-link") Apple Thunderbolt Display 27"
+          dl(class="products__item-features")
+            dt(class="products__item-features-key") Артикул:
+            dd(class="products__item-features-value") 42787825
+            dt(class="products__item-features-key") Опция:
+            dd(class="products__item-features-value") включена
+            dt(class="products__item-features-key") Цвет:
+            dd(class="products__item-features-value") серебристый
+            dt(class="products__item-features-key") Размер:
+            dd(class="products__item-features-value") 1280*1245*90
+            dt(class="products__item-features-key") Вес:
+            dd(class="products__item-features-value") 9 кг
+
+
+      // item
+      li(class="products__item")
+        div(class="products__item-side")
+          div(class="products__item-image-box")
+            a(href="#", class="products__item-image image-box")
+              img(src="images/products/2.jpg", alt="Apple iMac 27")
+        div(class="products__item-body")
+          div(class="products__item-title")
+            a(href="#", class="products__item-title-link") Apple iMac 27"
+          dl(class="products__item-features")
+            dt(class="products__item-features-key") Артикул:
+            dd(class="products__item-features-value") 42787825
+            dt(class="products__item-features-key") Опция:
+            dd(class="products__item-features-value") включена
+            dt(class="products__item-features-key") Цвет:
+            dd(class="products__item-features-value") серебристый
+            dt(class="products__item-features-key") Размер:
+            dd(class="products__item-features-value") 1280*1245*90
+            dt(class="products__item-features-key") Вес:
+            dd(class="products__item-features-value") 9 кг
+
+
+
+      // item
+      li(class="products__item")
+        div(class="products__item-side")
+          div(class="products__item-image-box")
+            a(href="#", class="products__item-image image-box")
+              img(src="images/products/3.jpg", alt="iPhone 5s Gold")
+        div(class="products__item-body")
+          div(class="products__item-title")
+            a(href="#", class="products__item-title-link") iPhone 5s Gold
+          dl(class="products__item-features")
+            dt(class="products__item-features-key") Артикул:
+            dd(class="products__item-features-value") 42787825
+            dt(class="products__item-features-key") Опция:
+            dd(class="products__item-features-value") включена
+            dt(class="products__item-features-key") Цвет:
+            dd(class="products__item-features-value") серебристый
+            dt(class="products__item-features-key") Размер:
+            dd(class="products__item-features-value") 1280*1245*90
+            dt(class="products__item-features-key") Вес:
+            dd(class="products__item-features-value") 9 кг
+
+
+      // item
+      li(class="products__item")
+        div(class="products__item-side")
+          div(class="products__item-image-box")
+            a(href="#", class="products__item-image image-box")
+              img(src="images/products/4.jpg", alt="iPad Air Wi-Fi + Cellular 128GB - Silver")
+        div(class="products__item-body")
+          div(class="products__item-title")
+            a(href="#", class="products__item-title-link") iPad Air Wi-Fi + Cellular 128GB - Silver
+          dl(class="products__item-features")
+            dt(class="products__item-features-key") Артикул:
+            dd(class="products__item-features-value") 42787825
+            dt(class="products__item-features-key") Опция:
+            dd(class="products__item-features-value") включена
+            dt(class="products__item-features-key") Цвет:
+            dd(class="products__item-features-value") серебристый
+            dt(class="products__item-features-key") Размер:
+            dd(class="products__item-features-value") 1280*1245*90
+            dt(class="products__item-features-key") Вес:
+            dd(class="products__item-features-value") 9 кг
+
+
+      // item
+      li(class="products__item")
+        div(class="products__item-side")
+          div(class="products__item-image-box")
+            a(href="#", class="products__item-image image-box")
+              img(src="images/products/5.jpg", alt="Apple iPod nano 7G 16 ГБ Blue")
+        div(class="products__item-body")
+          div(class="products__item-title")
+            a(href="#", class="products__item-title-link") Apple iPod nano 7G 16 ГБ Blue
+          dl(class="products__item-features")
+            dt(class="products__item-features-key") Артикул:
+            dd(class="products__item-features-value") 42787825
+            dt(class="products__item-features-key") Опция:
+            dd(class="products__item-features-value") включена
+            dt(class="products__item-features-key") Цвет:
+            dd(class="products__item-features-value") серебристый
+            dt(class="products__item-features-key") Размер:
+            dd(class="products__item-features-value") 1280*1245*90
+            dt(class="products__item-features-key") Вес:
+            dd(class="products__item-features-value") 9 кг
+
+
+      // item
+      li(class="products__item")
+        div(class="products__item-side")
+          div(class="products__item-image-box")
+            a(href="#", class="products__item-image image-box")
+              img(src="images/products/6.jpg", alt="Роутер Wi-Fi Apple AirPort Extreme Base Station")
+        div(class="products__item-body")
+          div(class="products__item-title")
+            a(href="#", class="products__item-title-link") Роутер Wi-Fi Apple AirPort Extreme Base Station
+          dl(class="products__item-features")
+            dt(class="products__item-features-key") Артикул:
+            dd(class="products__item-features-value") 42787825
+            dt(class="products__item-features-key") Опция:
+            dd(class="products__item-features-value") включена
+            dt(class="products__item-features-key") Цвет:
+            dd(class="products__item-features-value") серебристый
+            dt(class="products__item-features-key") Размер:
+            dd(class="products__item-features-value") 1280*1245*90
+            dt(class="products__item-features-key") Вес:
+            dd(class="products__item-features-value") 9 кг
+
+
+  // SEO text
+  include includes/seo-text

@@ -1,0 +1,28 @@
+/*--------------------------------------------------*\
+  =Page Tools
+\*--------------------------------------------------*/
+
+.page-tools {
+
+
+
+  /**
+   * Elements
+   */
+  
+  &__view-select,
+  &__pag {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  &__view-select {
+    width: 135px;
+    margin-right: 30px;
+  }
+
+  &__pag {
+
+  }
+
+}

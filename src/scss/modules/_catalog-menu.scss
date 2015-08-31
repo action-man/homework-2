@@ -1,0 +1,65 @@
+/*--------------------------------------------------*\
+  =Catalog Menu
+\*--------------------------------------------------*/
+
+.catalog-menu {
+  
+
+
+  /**
+   * Elements
+   */
+  
+  &__list {
+    @extend %reset-list;
+    position: relative;
+  }
+
+  &__item {
+    border-bottom: 1px solid $color-gray;
+    border-top: 1px solid white;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+
+    .catalog-menu__list {
+      display: none;
+      //border-top: 1px solid $color-gray;
+
+      .catalog-menu__link {
+        padding-left: 32px;
+        @include p-el(before) {
+          @include sprite($s-arr-right-micro);
+          margin-left: -12px;
+          margin-top: 5px;
+        }
+      }
+
+    }
+
+  }
+
+  &__link {
+    @extend %reset-link-border;
+    display: block;
+    padding: 6px 20px;
+    background-color: $color-gray-lighter;
+    color: $color-text;
+    line-height: 1.2;
+    overflow: hidden;
+    @include transition(background-color 120ms);
+
+    &:hover {
+      background-color: $color-gray;
+      color: $color-text;
+    }
+
+    &.is-active {
+      background-color: $color-primary;
+      color: white;
+    }
+
+  }
+
+}

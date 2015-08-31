@@ -1,0 +1,20 @@
+$s-arr-bottom-micro: (
+  name: 'arr-bottom-micro',
+  offset-x: 0px,
+  offset-y: 0px,
+  width: 11px,
+  height: 8px,
+  total_width: 11px,
+  total_height: 19px,
+  image: 'sprite.png'
+);
+$s-arr-right-micro: (
+  name: 'arr-right-micro',
+  offset-x: 0px,
+  offset-y: -11px,
+  width: 6px,
+  height: 8px,
+  total_width: 11px,
+  total_height: 19px,
+  image: 'sprite.png'
+);

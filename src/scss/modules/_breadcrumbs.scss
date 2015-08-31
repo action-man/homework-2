@@ -1,0 +1,36 @@
+/*--------------------------------------------------*\
+  =Breadcrumbs
+\*--------------------------------------------------*/
+
+.breadcrumbs {
+  @extend %reset-list;
+  font-size: 14px;
+  float: left;
+  padding-right: 20px;
+  width: 50%;
+
+
+  
+  /**
+   * Elements
+   */
+
+  &__item,
+  &__sep {
+    display: inline-block;
+  }
+
+  &__item {
+    
+  }
+
+  &__sep {
+    font-size: 10px;
+    margin: 0 1px;
+  }
+
+  &__link {
+
+  }
+
+}

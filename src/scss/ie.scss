@@ -1,0 +1,28 @@
+.ie8, .ie9 {
+
+  .nav {
+
+    &__link {
+      padding-left: 18px;
+      padding-right: 18px;
+    }
+
+  }
+
+  .products_view-grid {
+
+    .products__list {
+      font-size: 0;
+      margin-left: -25px;
+    }
+
+    .products__item {
+      font-size: 15px;
+      display: inline-block;
+      vertical-align: top;
+      margin-left: 25px;
+    }
+
+  }
+
+}

@@ -1,0 +1,94 @@
+/*--------------------------------------------------*\
+  =Footer
+\*--------------------------------------------------*/
+
+.footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 240px;
+  background: url('../images/bg_footer_pattern.jpg') repeat #613993;
+
+
+
+  /**
+   * Elements
+   */
+  
+  &__inner {
+    position: relative;
+    width: $site-width;
+    height: 100%;
+    margin: 0 auto;
+  }
+
+  &__logo, 
+  &__menu,
+  &__misc {
+    position: absolute;
+  }
+
+  &__logo {
+    left: $site-padding;
+    top: 50%;
+    margin-top: -20px;
+  }
+
+  &__menu {
+    width: 485px;
+    left: 270px;
+    top: 55px;
+    @extend %clearfix;
+  }
+
+  &__menu-col {
+    float: left;
+    width: 33.33%;
+  }
+
+  &__menu-list {
+    @extend %reset-list;
+  }
+
+  &__menu-title {
+    margin-bottom: 5px;
+    color: white;
+    font-family: $font-bold;
+    padding: 3px 0;
+  }
+
+  &__menu-item {
+    margin-bottom: 5px;
+  }
+
+  &__menu-link {
+    
+    color: white;
+    border-color: transparentize(#fff, .4);
+
+    &:hover {
+      color: white;
+    }
+
+  }
+
+  &__misc {
+    //text-align: right;
+    top: 72px;
+    right: $site-padding;
+  }
+
+  &__apps {
+    @extend %reset-list;
+  }
+
+  &__apps-item {
+    display: inline-block;
+  }
+
+  &__socials {
+    margin-top: 25px;
+  }
+
+}

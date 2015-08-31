@@ -1,0 +1,20 @@
+/*--------------------------------------------------*\
+  =Image Box
+\*--------------------------------------------------*/
+
+.image-box {
+  @extend %reset-link-border;
+
+  display: block;
+  position: relative;
+
+  img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+  }
+
+}

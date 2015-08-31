@@ -1,0 +1,49 @@
+/*--------------------------------------------------*\
+  =Buttons
+\*--------------------------------------------------*/
+
+.btn {
+  @include transition(
+    background-color 200ms,
+    border 150ms
+  );
+
+  @include user-select(none);
+  display: inline-block;
+  position: relative;
+  font-family: $font-book;
+  font-size: 19px;
+  line-height: $line-height-base;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  margin: 0;
+  padding: 2px 20px;
+  cursor: pointer;
+  border-radius: none;
+  background-color: transparent;
+  overflow: visible;
+  border: 0;
+
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: none;
+  }
+
+  &[disabled],
+  &.is-disabled {
+    opacity: .6;
+  }
+
+
+
+  /**
+   * Modifiers
+   */
+
+  &_expand {
+    width: 100%;
+  }
+
+}

@@ -1,0 +1,22 @@
+// header
+header(class="header")
+  div(class="header__inner")
+
+
+    // main logo
+    a(href="/dist", class="header__logo main-logo")
+      img(src="images/main-logo.png", alt="Apple Shop", width="199", height="57")
+
+
+    // contacts
+    -var phoneCode = '+7 (921)'
+    div(class="header__contacts contacts")
+      a(href="tel:+79213221232", class="contacts__phone")
+        span(class="contacts__phone-code")= phoneCode
+        span(class="contacts__phone-num")  322 12 32
+      br
+      a(href="mailto:manager@company.com", class="contacts__email") manager@company.com
+
+
+    // nav
+    +nav(['Мобильные телефоны', 'Планшеты', 'MP3-плееры', 'Персональные компьютеры', 'Ноутбуки', 'Apple TV', 'Аксессуары'], 1)(class="header__nav")

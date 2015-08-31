@@ -1,0 +1,44 @@
+/*--------------------------------------------------*\
+  =Header
+\*--------------------------------------------------*/
+
+.header {
+  position: relative;
+  height: 120px;
+  @include linear-gradient(to right, #dae5f0 0%, #f0f5f9 50%, #dae5f0 100%, $fallback: #e6eef4);
+
+
+
+  /**
+   * Elements
+   */
+  
+  &__inner {
+    width: $site-width;
+    height: 100%;
+    position: relative;
+    padding: 0 $site-padding;
+    margin: 0 auto;
+  }
+
+  &__logo,
+  &__contacts,
+  &__nav {
+    position: absolute;
+  }
+
+  &__logo {
+    left: $site-padding;
+    top: 25px;
+  }
+
+  &__contacts {
+    right: $site-padding;
+    top: 18px;
+  }
+
+  &__nav {
+    top: 100px;
+  }
+
+}

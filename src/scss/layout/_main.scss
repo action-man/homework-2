@@ -1,0 +1,10 @@
+/*--------------------------------------------------*\
+  =Main
+\*--------------------------------------------------*/
+
+.main {
+  width: $site-width;
+  padding: 40px $site-padding 315px;
+  margin: 0 auto;
+  @extend %clearfix;
+}

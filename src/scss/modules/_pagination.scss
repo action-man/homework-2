@@ -1,0 +1,36 @@
+/*--------------------------------------------------*\
+  =Pagination
+\*--------------------------------------------------*/
+
+.pagination {
+  @extend %reset-list;
+  text-align: center;
+  cursor: default;
+  display: inline-block;
+
+
+
+  /**
+   * Elements
+   */
+
+  &__item {
+    display: inline-block;
+    margin-left: 2px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+  }
+
+  &__link {
+
+    &.is-current {
+      color: $color-text;
+      @extend %reset-link-border;
+    }
+
+  }
+
+}

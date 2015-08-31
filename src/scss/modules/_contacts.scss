@@ -1,0 +1,44 @@
+/*--------------------------------------------------*\
+  =Contacts
+\*--------------------------------------------------*/
+
+.contacts {
+  text-align: right;
+
+
+
+  /**
+   * Elements
+   */
+  
+  &__phone {
+    @extend %reset-link-border;
+  }
+
+  &__phone-code {
+    color: $color-primary;
+    font-family: $font-bold;
+    vertical-align: 6px;
+    font-size: 14px;
+  }
+
+  &__phone-num {
+    font-size: 25px;
+    color: $color-text;
+  }
+
+
+  &__email {
+    font-size: 17px;
+    color: #613993;
+    @extend %reset-link-border;
+    text-decoration: underline;
+
+    &:hover {
+      color: #613993;
+      text-decoration: none;
+    }
+
+  }
+
+}

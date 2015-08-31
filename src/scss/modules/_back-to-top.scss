@@ -1,0 +1,44 @@
+/*--------------------------------------------------*\
+  =Back To Top
+\*--------------------------------------------------*/
+
+.back-to-top {
+  display: none;
+  position: fixed;
+  bottom: 290px;
+  left: 50%;
+  margin-left: 530px;
+  font-family: $font-bold;
+  color: white;
+  background-color: $color-primary;
+  font-size: 16px;
+  padding: 7px 10px;
+  @extend %reset-link-border;
+  @include transition(background-color 150ms);
+
+  @include p-el(before) {
+    @include triangle(12px, $color-primary, up);
+    @include transition(border-bottom-color 150ms);
+    bottom: 100%;
+    left: 50%;
+    margin-left: -6px;
+  }
+
+  @include p-el(after) {
+    @include triangle(12px, #fff, up);
+    bottom: 0;
+    left: 50%;
+    margin-left: -6px;    
+  }
+
+  &:hover {
+    color: white;
+    background-color: darken($color-primary, 10%);
+
+    &:before {
+      border-bottom-color: darken($color-primary, 10%);
+    }
+
+  }
+
+}

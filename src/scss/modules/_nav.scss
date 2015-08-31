@@ -1,0 +1,89 @@
+/*--------------------------------------------------*\
+  =Nav
+\*--------------------------------------------------*/
+
+.nav {
+  position: relative;
+  margin-left: 12px;
+  z-index: 1;
+
+
+
+  /**
+   * Elements
+   */
+  
+  &__link {
+    display: inline-block;
+    position: relative;
+    color: $color-text;
+    line-height: 40px;
+    padding-left: 14px;
+    padding-right: 23px;
+    @extend %reset-link-border;
+    @include transition(background-color 120ms);
+
+    @include p-el(before) {
+      top: 0;
+      @include transform(skew(31deg));
+      @include transform-origin(left bottom);
+      border-right: 1px solid #ddd;     
+    }
+
+    @include p-el(after) {
+      bottom: 0;
+      @include transform(skew(-31deg));
+      @include transform-origin(left top);
+      border-right: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
+    }
+
+    &:before,
+    &:after {
+      background-color: $color-gray-lighter;
+      height: 20px;
+      left: 0;
+      right: 0;
+      z-index: -1;
+    }
+
+    &:first-child {
+
+      &:before {
+        border-left: 1px solid #ddd;
+      }
+
+    }
+
+    &:last-child {
+
+      &:before {
+        border-right: 0;
+      }
+
+    }
+
+    &:hover {
+      text-decoration: none;
+      color: $color-text;
+
+      &:before,
+      &:after {
+        background-color: $color-gray;
+      }
+
+    }
+
+    &.is-current {
+      color: white;
+
+      &:before,
+      &:after {
+        background-color: $color-primary;
+      }
+
+    }
+
+  }
+
+}

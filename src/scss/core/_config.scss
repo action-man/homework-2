@@ -1,0 +1,24 @@
+// Palette
+$color-primary      : #00b9fe;
+$color-gray         : #dce6f0;
+$color-gray-lighter : #f7f7f7;
+
+
+
+// Fonts
+$font-regular : 'elektra_light_proregular';
+$font-bold    : 'elektra_light_probold';
+
+
+
+// Scaffolding
+$color-body-background : white;
+$color-text            : #5c7b98;
+$selection-color       : #222;
+$selection-bg          : #b3d4fc;
+$font-family-base      : $font-regular;
+$font-size-base        : 15px;
+$line-height-base      : 20/15;
+$line-height-computed  : $font-size-base * $line-height-base;
+$site-width            : 1020px;
+$site-padding          : 10px;

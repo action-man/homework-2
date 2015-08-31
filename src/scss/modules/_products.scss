@@ -1,0 +1,155 @@
+/*--------------------------------------------------*\
+  =Products
+\*--------------------------------------------------*/
+
+.products {
+  
+
+
+  /**
+   * Elements
+   */
+
+  &__list {
+    @extend %reset-list;
+    margin-top: -25px;
+  }
+
+  &__item {
+    margin-top: 25px;
+    border: 1px solid #dbe2eb;
+    @include transition(box-shadow 150ms);
+
+    &:hover {
+      box-shadow: 0 1px 6px 0 rgba(0, 0, 0, .14);
+    }
+
+  }
+
+  &__item-image-box {
+    @include transition(opacity 150ms);
+    
+    &:hover {
+      opacity: .8;
+    }
+
+  }
+
+  &__item-image {
+    text-align: center;
+
+    img {
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+    }
+
+  }
+
+  &__item-body {
+    overflow: hidden;
+  }
+
+  &__item-title {
+    font-size: $font-size-base;
+    margin-bottom: 15px;
+    line-height: 1.4;
+  }
+
+  &__item-features {
+    @extend %reset-dlist;
+    @extend %clearfix;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  &__item-features-key,
+  &__item-features-value {
+    display: inline;
+  }
+
+  &__item-features-key {
+    font-family: $font-regular;
+  }
+
+  &__item-features-value {
+
+  }
+
+
+
+  /**
+   * Modifiers
+   */
+  
+  &_view-list {
+    
+    .products {
+
+      &__item {
+        @extend %clearfix;
+        padding: 30px;
+      }
+
+      &__item-side {
+        float: left;
+        margin-right: 25px;
+      }
+
+      &__item-image {
+        @include size(140px 110px);
+      }
+
+    }
+
+  }
+
+  &_view-grid {
+
+    .products {
+    
+      &__list {
+        @include display(flex);
+        @include justify-content(space-between);
+        @include flex-flow(row wrap);
+      }
+
+      &__item {
+        width: 230px;
+      }
+
+      &__item {
+        padding: 15px;
+      }
+
+      &__item-side {
+        margin-bottom: 10px;
+        float: none;
+      }
+
+      &__item-image {
+        @include size(100% 160px);
+      }
+
+      &__item-features-key,
+      &__item-features-value {
+        float: left;
+      }
+
+      &__item-features-key {
+        clear: left;
+        width: 48%;
+        padding-right: 10px;
+      }
+
+      &__item-features-value {
+        width: 52%;
+      }
+
+    }
+
+  }
+
+}
